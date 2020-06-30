@@ -54,3 +54,17 @@ btnQuote.addEventListener('click', funQuote);
 
 
 // --- passMessage ---
+
+const btnSendMess = document.querySelector('.btnSendMess');
+let messIn = document.querySelector('.messIn');
+let messOut = document.querySelector('.messOut');
+btnSendMess.addEventListener('click', funSendMess);
+
+function funSendMess() {
+    if (messIn.value == '') {
+        alert('Right somethin...')
+    } else {
+        messOut.innerHTML = messIn.value;
+        messIn.value = '';
+    }
+}
