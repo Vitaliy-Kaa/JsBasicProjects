@@ -40,3 +40,17 @@ const quotes = [
         quote: 'The strength of JavaScript is that you can do anything. The weakness is that you will.',
     },
 ];
+
+let outquote = document.querySelector('.outquote');
+let author = document.querySelector('.author');
+const btnQuote = document.querySelector('.btnQuote');
+
+const funQuote = () => {
+    let i = Math.floor(Math.random() * quotes.length);
+    outquote.innerHTML = quotes[i].quote;
+    author.innerHTML = quotes[i].name;
+}
+btnQuote.addEventListener('click', funQuote);
+
+
+// --- passMessage ---
